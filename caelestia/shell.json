@@ -1,0 +1,122 @@
+{
+  "background": {
+    "enabled": false,
+    "wallpaperEnabled": false,
+    "desktopClock": {
+      "enabled": false
+    },
+    "visualiser": {
+      "enabled": false
+    }
+  },
+  "bar": {
+    "entries": [
+      {
+        "id": "logo",
+        "enabled": true
+      },
+      {
+        "id": "spacer",
+        "enabled": true
+      },
+      {
+        "id": "tray",
+        "enabled": true
+      },
+      {
+        "id": "clock",
+        "enabled": true
+      },
+      {
+        "id": "statusIcons",
+        "enabled": true
+      },
+      {
+        "id": "power",
+        "enabled": true
+      }
+    ],
+    "scrollActions": {
+      "workspaces": false,
+      "volume": true,
+      "brightness": true
+    },
+    "popouts": {
+      "activeWindow": false,
+      "tray": true,
+      "statusIcons": true
+    },
+    "status": {
+      "showAudio": true,
+      "showMicrophone": true,
+      "showKbLayout": false,
+      "showNetwork": true,
+      "showWifi": true,
+      "showBluetooth": true,
+      "showBattery": true,
+      "showLockStatus": false
+    },
+    "workspaces": {
+      "shown": 5,
+      "activeIndicator": false,
+      "occupiedBg": false,
+      "showWindows": false,
+      "perMonitorWorkspaces": false
+    },
+    "activeWindow": {
+      "showOnHover": false
+    }
+  },
+  "dashboard": {
+    "enabled": false,
+    "showOnHover": false
+  },
+  "launcher": {
+    "enabled": false,
+    "showOnHover": false
+  },
+  "session": {
+    "enabled": true,
+    "commands": {
+      "logout": [
+        "niri",
+        "msg",
+        "action",
+        "quit"
+      ]
+    }
+  },
+  "sidebar": {
+    "enabled": false
+  },
+  "utilities": {
+    "enabled": false,
+    "toasts": {
+      "configLoaded": false,
+      "capsLockChanged": false,
+      "numLockChanged": false,
+      "kbLayoutChanged": false
+    }
+  },
+  "osd": {
+    "enabled": false
+  },
+  "general": {
+    "apps": {
+      "terminal": [
+        "kitty"
+      ],
+      "audio": [
+        "pavucontrol"
+      ],
+      "explorer": [
+        "xdg-open",
+        "."
+      ]
+    },
+    "idle": {
+      "lockBeforeSleep": false,
+      "timeouts": []
+    }
+  }
+}

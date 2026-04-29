@@ -285,15 +285,17 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
+// This block starts the selected bar/shell, defaulting to Waybar.
+// # BEGIN waybar/caelestia switch
 spawn-at-startup "awww-daemon"
-spawn-at-startup "waybar"
+spawn-at-startup "~/.config/niri/scripts/bar-shell-switch/start-current-bar-shell.sh"
 spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 spawn-at-startup "mako"
 spawn-at-startup "fcitx5"
 spawn-at-startup "/usr/bin/kanshi"
 spawn-at-startup "~/.config/niri/scripts/swayidle.sh"
 spawn-sh-at-startup "clipse --listen"
+// # END waybar/caelestia switch
 
 
 
@@ -669,7 +671,13 @@ binds {
 
     Mod+Shift+7 { spawn "~/.config/niri/scripts/edit-screenshot.sh"; }
 
-    Mod+Shift+6 { spawn-sh "pkill waybar || true && waybar"; }
+    // # BEGIN waybar/caelestia switch
+    Mod+Shift+6 hotkey-overlay-title="Enable Waybar" { spawn "~/.config/niri/scripts/bar-shell-switch/enable-waybar.sh"; }
+
+    Mod+Shift+5 hotkey-overlay-title="Enable Caelestia shell" { spawn "~/.config/niri/scripts/bar-shell-switch/enable-caelestia-shell.sh"; }
+
+    Mod+Shift+4 hotkey-overlay-title="Show bar/shell status" { spawn "~/.config/niri/scripts/bar-shell-switch/status-bar-shell.sh" "--notify"; }
+    // # END waybar/caelestia switch
 
 }
 
@@ -690,4 +698,3 @@ layer-rule {
 // workspace "side" {
 //     open-on-output "Beihai Century Joint Innovation Technology Co.,Ltd P2410R 0000000000000"
 // }
-
